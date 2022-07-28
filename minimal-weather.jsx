@@ -1,8 +1,4 @@
-
 import { css } from "uebersicht"
-// import sun from './sun.png'
-
-// export const command = "echo Hello World!"
 
 
 const size = 30
@@ -12,7 +8,7 @@ const left = 660
 const units = "metric"
 const key = ""
 
-export const refreshFrequency = 30 * 60 * 1000 // ms
+export const refreshFrequency = 30 * 60 * 1000
 
 export const initialState = {
   loading: true,
@@ -46,7 +42,6 @@ export const updateState = (event, previousState) => {
   }
 }
 
-// const icon = 'minimal-weather.widget/icon.png'
 export const render = ({ loading, temp, icon }) => (
   <div className={container}>
     <img src={"minimal-weather.widget/icons/" + icon + ".png"} className={image} />
@@ -68,7 +63,7 @@ const text = css`
   font-family: 'Avenir', 'Ariel';
   letter-spacing: 3px;
   font-weight: lighter
-   font-smoothing: antialiased
+  font-smoothing: antialiased
 `
 
 const image = css`
@@ -76,9 +71,7 @@ const image = css`
   width: ${size + 25 + "px"};
   length: ${size + 25 + "px"};
   margin: 10px;
-
   filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.4));
-
 `
 
 const container = css`
